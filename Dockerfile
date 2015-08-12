@@ -1,6 +1,6 @@
 ############################################################
 # Dockerfile to build the couchbase server
-# Based on Centos
+# Based on Ubuntu
 #
 # PREREQUISITES
 #  Firewall:
@@ -50,7 +50,7 @@ EXPOSE 21100-21199
 #Configure Couchbase System Scripts
 ADD root/bin/service_start_couchbase.sh /root/bin/service_start_couchbase.sh
 ADD etc/service/couchbase/run /etc/service/couchbase/run
-RUN chmod 750 /root/bin/service_config_couchbase.sh /etc/my_init.d/service_config_couchbase.sh /root/bin/service_start_couchbase.sh etc/service/couchbase/run
+RUN chmod 750 /root/bin/service_start_couchbase.sh etc/service/couchbase/run
 	#mkdir -p /etc/service/couchbase
 	#ln -s /root/bin/service_start_couchbase.sh /etc/service/couchbase/run
 
@@ -65,8 +65,8 @@ ENV CB_REST_PASSWORD couchadmpwd
 
 
 #Copy other files
-Add root/bin/paping /root/bin/paping
-RUN chmod 750 /root/bin/paping
+#Add root/bin/paping /root/bin/paping
+#RUN chmod 750 /root/bin/paping
 
 
 ##################### INSTALLATION END #####################
