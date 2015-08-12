@@ -13,7 +13,7 @@
 #
 # Docker run example:
 #  For Dev:
-#   docker run --name my-couchbase --add-host ${HOSTNAME}:127.0.0.1 -e DOCKERHOSTNAME=${HOSTNAME} -e DOCKERHOSTIP=$(ip address list eth0|grep -oP 'inet\s([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)'|awk '{print $2}') -e WWW_TIER=DEV -p 8091:8091 -p 8092:8092 -p 11209:11209 -p 11210:11210 -p 11211:11211 -p 11212:11212 -p 4369:4369 -p 21100-21199:21100-21199 -p 13306:13306 --ulimit nofile=40960:40960 --ulimit core=100000000:100000000 --ulimit memlock=100000000:100000000 my-couchbase &
+#   docker run --name my-couchbase --add-host ${HOSTNAME}:127.0.0.1 -e DOCKERHOSTNAME=${HOSTNAME} -e DOCKERHOSTIP=$(ip address list eth0|grep -oP 'inet\s([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)'|awk '{print $2}') -e WWW_TIER=DEV -p 8091:8091 -p 8092:8092 -p 11209:11209 -p 11210:11210 -p 11211:11211 -p 11212:11212 -p 4369:4369 -p 21100-21199:21100-21199 -p 13306:13306 --ulimit nofile=40960:40960 --ulimit core=100000000:100000000 --ulimit memlock=100000000:100000000 mycouchbase &
 ############################################################
 FROM phusion/baseimage:0.9.17
 MAINTAINER Dave Barnum <dave@thebarnums.com>
